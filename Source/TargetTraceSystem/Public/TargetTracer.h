@@ -11,7 +11,7 @@ struct TARGETTRACESYSTEM_API FTargetTracerContext
 {
 	GENERATED_BODY()
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, Category = "TargetTraceSystem|Context")
 	AActor* OwnerActor = nullptr;
 
 	FTargetTracerContext()
@@ -31,12 +31,12 @@ struct TARGETTRACESYSTEM_API FTargetTracerContext
 /**
  * 
  */
-UCLASS(Abstract, DefaultToInstanced, EditInlineNew, CollapseCategories)
+UCLASS(Blueprintable, Abstract, DefaultToInstanced, EditInlineNew, CollapseCategories)
 class TARGETTRACESYSTEM_API UTargetTracer : public UObject
 {
 	GENERATED_BODY()
 
 public:
 	UFUNCTION(BlueprintNativeEvent, Category = "TargetTraceSystem|Tracer")
-	FVector Trace(FTargetTracerContext& Context);
+	FVector Trace(UPARAM(Ref) FTargetTracerContext& Context);
 };
