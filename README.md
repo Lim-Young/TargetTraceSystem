@@ -4,7 +4,7 @@
 # TargetTraceSystem
 > Language: [English](README.md), [中文](README-CN.md)
 
-A versatile target tracking system that allows developers to centrally manage various target tracking requirements, especially suitable for enemy AI systems.
+A universal target tracking system that allows developers to centrally manage various target tracking requirements, especially suitable for enemy AI systems.
 
 ## Features
 - Event-driven, performance-friendly
